@@ -7,7 +7,7 @@ module.exports = function(sequelize, Datatypes){
     })
 
     Resources.associate = function(models){
-        Resources.belongsTo(models.Activity, {
+        Resources.belongsTo(models.Activities, {
             foreignKey: {
                 allowNull: false,
             }
