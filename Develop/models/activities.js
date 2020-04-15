@@ -9,15 +9,16 @@ module.exports = function(sequelize, Datatypes){
     Activities.associate = function(models){
         Activities.belongsTo(models.Destination, {
             foreignKey: {
-                allowNull: false,
+                allowNull: false
             }
+            
         });
 
         Activities.hasMany(models.Notes, {
-            onDelete: "cascade"
+            
         });
         Activities.hasMany(models.Resources, {
-            onDelete: "cascade"
+          
         });
     };
     return Activities;

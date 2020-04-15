@@ -2,7 +2,7 @@ module.exports = function(sequelize, Datatypes){
     const Resources = sequelize.define("Resources", {
 
         resource: Datatypes.STRING,
-        description: Datatypes.STRING,
+        description: Datatypes.STRING
 
     })
 
@@ -11,8 +11,8 @@ module.exports = function(sequelize, Datatypes){
             foreignKey: {
                 allowNull: false,
             }
-        });
-    };
+        })
+    }
     return Resources;
 
 
