@@ -15,10 +15,10 @@ module.exports = function(sequelize, Datatypes){
         });
 
         Activities.hasMany(models.Notes, {
-            
+            onDelete: 'cascade'
         });
         Activities.hasMany(models.Resources, {
-          
+            onDelete: 'cascade'
         });
     };
     return Activities;
