@@ -48,4 +48,14 @@ router.get("/api/user_data", function(req, res) {
   }
 });
 
+router.delete('/api/user/:id', (req, res) => {
+  db.User.destroy({
+      where: {
+          id: req.params.id
+      }
+  })
+  .then((results) => res.status(200).json(results))
+  .catch(error => res.status(500).json(error))
+});
+
   module.exports = router;
