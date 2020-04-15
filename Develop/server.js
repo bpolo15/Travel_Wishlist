@@ -14,6 +14,7 @@ const db = require("./models");
 const app = express();
 
 app.use(express.urlencoded({ extended: true }));
+//listening for request headers that contain x-wwww form urlencoded 
 app.use(express.json());
 app.use(express.static("public"));
 // We need to use sessions to keep track of our user's login status
@@ -24,9 +25,11 @@ app.use(passport.session());
 // Requiring our routes
 app.use(require("./controllers/htmlController.js"))
 app.use(require("./controllers/authController.js"))
+app.use(require("./controllers/destinationController.js"))
+app.use(require("./controllers/activityController.js"))
 
 // Syncing our database and logging a message to the user upon success
-db.sequelize.sync().then(function() {
+db.sequelize.sync({force: false}).then(function() {
   app.listen(PORT, function() {
     console.log("==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.", PORT, PORT);
   });
