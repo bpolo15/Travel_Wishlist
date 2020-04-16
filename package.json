@@ -1,0 +1,39 @@
+{
+  "name": "1-Passport-Example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "watch": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+<<<<<<< HEAD:Develop/package.json
+    "bcryptjs": "^2.4.3",
+    "express": "^4.17.1",
+    "express-session": "^1.17.0",
+=======
+    "bcrypt": "^4.0.1",
+    "bcryptjs": "2.4.3",
+    "express": "^4.17.1",
+    "express-session": "^1.17.0",
+    "express-sessions": "^1.0.6",
+>>>>>>> 25febf10eaccdfe802844b86a36d703360cf886e:package.json
+    "mysql2": "^1.7.0",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "sequelize": "^5.21.6",
+    "sequelize-cli": "^5.5.1"
+<<<<<<< HEAD:Develop/package.json
+  },
+=======
+  }, 
+>>>>>>> 25febf10eaccdfe802844b86a36d703360cf886e:package.json
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  }
+}
