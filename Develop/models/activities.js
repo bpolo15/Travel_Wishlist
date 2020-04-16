@@ -10,11 +10,13 @@ module.exports = function(sequelize, Datatypes){
         Activities.belongsTo(models.Destination, {
             foreignKey: {
                 allowNull: false,
+                // onDelete: "cascade"
             }
         });
 
         Activities.hasMany(models.Notes, {
             onDelete: "cascade"
+ 
         });
         Activities.hasMany(models.Resources, {
             onDelete: "cascade"
