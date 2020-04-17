@@ -46,3 +46,12 @@ color: white;
   /* float: right; */
   display: inline-block;
 }
+.card{
+  float: left;
+}
+.delete-destination{
+  color: red;
+  font-size: small;
+  background-color: transparent;
+  border: transparent;
+}
