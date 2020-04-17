@@ -1,20 +1,6 @@
 $(document).ready(function () {
-  function deleteDestination() {
-    console.log("DELETE");
-    event.preventDefault();
-    const id = $(this).attr("data-destination-id");
-    console.log(id);
 
-    $.ajax({
-      url: "/api/destinations/" + id,
-      method: "DELETE",
-    })
-      .then((response) => {
-        console.log(response);
-        location.reload();
-      })
-      .catch((error) => console.log(error));
-  }
+
   function displayDestinations() {
     $.get("/api/destinations").then((response) => {
       console.log(response);
@@ -41,6 +27,9 @@ $(document).ready(function () {
       }
     });
   }
+
+  
+
   displayDestinations();
   $(document).on("click", ".delete-destination", deleteDestination);
 
@@ -67,19 +56,6 @@ $(document).ready(function () {
   }
 
   function addDestination(newDestination) {
-    // $.ajax({
-    //     url: 'api/destinations',
-    //     type: "POST",
-    //     data: newDestination,
-    //     dataType:'json',
-    //     processData: false,
-    //     success: function (response) {
-    //         console.log(response);
-    //     },
-    //     error: function(error){
-    //         console.log("Something went wrong", error);
-    //     }
-    // });
     $.post("/api/destinations", newDestination)
       .then((response) => {
         console.log(response);
@@ -88,14 +64,31 @@ $(document).ready(function () {
       .catch((error) => console.log(error));
   }
 
-  $("#exampleModal").on("show.bs.modal", function (event) {
-    console.log("Button");
-    var button = $(event.relatedTarget); // Button that triggered the modal
-    var recipient = button.data("whatever"); // Extract info from data-* attributes
-    // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
-    // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
-    var modal = $(this);
-    modal.find(".modal-title").text("New message to " + recipient);
-    modal.find(".modal-body input").val(recipient);
-  });
+  function deleteDestination() {
+    console.log("DELETE");
+    event.preventDefault();
+    const id = $(this).attr("data-destination-id");
+    console.log(id);
+
+    $.ajax({
+      url: "/api/destinations/" + id,
+      method: "DELETE",
+    })
+      .then((response) => {
+        console.log(response);
+        location.reload();
+      })
+      .catch((error) => console.log(error));
+  }
+
+  // $("#exampleModal").on("show.bs.modal", function (event) {
+  //   console.log("Button");
+  //   var button = $(event.relatedTarget); // Button that triggered the modal
+  //   var recipient = button.data("whatever"); // Extract info from data-* attributes
+  //   // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+  //   // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+  //   var modal = $(this);
+  //   modal.find(".modal-title").text("New message to " + recipient);
+  //   modal.find(".modal-body input").val(recipient);
+  // });
 });
