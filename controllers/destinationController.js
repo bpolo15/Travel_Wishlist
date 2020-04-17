@@ -20,6 +20,7 @@ router.get('/api/destinations/:id', (req, res) => {
 });
 
 router.post('/api/destinations', (req, res) => {
+    console.dir(req.body)
     db.Destination.create(req.body)
     .then(results => res.json(results))
     .catch(error => res.json(error))
