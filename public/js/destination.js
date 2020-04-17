@@ -1,8 +1,10 @@
 $(document).ready(function () {
 
+  
 
   function displayDestinations() {
-    $.get("/api/destinations").then((response) => {
+   
+    $.get("/api/destinations/").then((response) => {
       console.log(response);
       $("#newDestination").html('');
       for (let i = 0; i < response.length; i++) {
@@ -23,7 +25,7 @@ $(document).ready(function () {
         destinationName.append(deleteButton);
         cardBody.append(activityLink, destinationName);
         card.append(cardBody);
-        $("#newDestination").append(card);
+        $("#newDestination").append(card);3
       }
     });
   }
@@ -37,6 +39,7 @@ $(document).ready(function () {
     const userId = response.id;
     console.log("user id: ", userId);
     getDestination(userId);
+    
   });
   function getDestination(UserId) {
     $("#save").on("click", (event) => {
