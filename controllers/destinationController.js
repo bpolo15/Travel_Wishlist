@@ -12,12 +12,22 @@ router.get('/api/destinations/:id', (req, res) => {
     db.Destination.findAll({
         where: {
             id: req.params.id
-        },
-        include: [db.Activites]
+        }
     })
     .then(results => res.json(results))
     .catch(error => res.json(error))
 });
+
+router.get('/api/destinations/user/:UserId', (req, res) => {
+    db.Destination.findAll({
+        where: {
+            UserId: req.params.UserId
+        }
+    })
+    .then(results => res.json(results))
+    .catch(error => res.json(error))
+
+})
 
 router.post('/api/destinations', (req, res) => {
     console.dir(req.body)
