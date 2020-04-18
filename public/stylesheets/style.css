@@ -16,6 +16,12 @@ form.login {
   color: white;
   font-weight: bold;
   -webkit-text-stroke-width: .15px;
+  -webkit-text-stroke-color: rgb(107, 107, 107);
+}
+#welcometext{
+  color: white;
+  font-weight: bold;
+  -webkit-text-stroke-width: .15px;
   -webkit-text-stroke-color: grey;
 }
 #signupPage{
@@ -43,6 +49,21 @@ color: white;
   background: transparent;
 }
 #homeLogout{
-  /* float: right; */
   display: inline-block;
+}
+.card{
+  float: left;
+}
+.delete-destination{
+  color: red;
+  font-size: small;
+  background-color: transparent;
+  border: transparent;
+}
+.container-fluid{
+
+  display: inline-block;
+}
+#newDestBtn{
+  margin-left: 10px;
 }
