@@ -13,16 +13,13 @@ module.exports = function(sequelize, Datatypes){
             }
         });
 
-<<<<<<< HEAD:Develop/models/destination.js
         // Destination.hasMany(models.Activities, {
         //     onDelete: "cascade"
         // });
-=======
         Destination.hasMany(models.Activities, {
             onDelete: "cascade"
             // hooks: true
         });
->>>>>>> 25febf10eaccdfe802844b86a36d703360cf886e:models/destination.js
     };
     return Destination;
 

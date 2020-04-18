@@ -13,7 +13,6 @@ router.get('/api/activities/:id', (req, res) => {
         where: {
             id: req.params.id
         },
-        include: [db.Notes, db.Resources]
     })
     .then(results => res.json(results))
     .catch(error => res.json(error))
