@@ -53,6 +53,11 @@ color: white;
 }
 .card{
   float: left;
+  padding: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  min-height: 250px;
+
+
 }
 .delete-destination{
   color: red;
@@ -72,4 +77,13 @@ color: white;
 }
 #newDestBtn{
   margin-left: 10px;
+}
+#homePage{
+  background: url(Images/Shkoder.JPG) no-repeat center center fixed;
+  background-size: cover;
+}
+.card-img-top{
+  max-height: 275px;
+  max-width: 500px;
+ 
 }
