@@ -5,6 +5,7 @@ $(document).ready(function() {
         console.log("user id: ", userId);
         getDestination(userId);
         
+        
       });
 function getDestination(userId){
       $.get('/api/destinations/user/' + userId).then((response) => {
@@ -25,6 +26,7 @@ function getDestination(userId){
       const id = $(this).attr("data-destination-id")
       console.log(id);
       renderActivities(id);
+      getActivity(id)
     }
 
     function renderActivities(id){
@@ -75,8 +77,37 @@ function getDestination(userId){
             
         }
 
+        function getActivity(DestinationId) {
+          $("#save").on("click", (event) => {
+            event.preventDefault();
+            const activity = $("#act-name").val().trim();
+            const picture = $("#imgurl").val().trim();
+            const note = $("#act-notes").val().trim();
+            const resource = $("#res-url").val().trim();
+            const description = $("#descrp").val().trim();
+            console.log(activity, picture, note, resource, description);
+      
+            const newActivities = {
+              activity,
+              picture,
+              note,
+              resource,
+              description,
+              DestinationId
+            };
+            console.log("New activity: ", newActivities);
+            addActivity(newActivities);
+          });
+        }
 
-
+        function addActivity(newActivities) {
+          $.post("/api/activities", newActivities)
+            .then((response) => {
+              console.log(response);
+              location.reload();
+            })
+            .catch((error) => console.log(error));
+        }
 
 
 
