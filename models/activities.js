@@ -3,23 +3,20 @@ module.exports = function(sequelize, Datatypes){
 
         activity: Datatypes.STRING,
         picture: Datatypes.STRING,
+        note: Datatypes.STRING,
+        resource: Datatypes.STRING,
+        description: Datatypes.STRING
 
     })
 
     Activities.associate = function(models){
         Activities.belongsTo(models.Destination, {
             foreignKey: {
-                allowNull: false
+                allowNull: false,
             }
              
         });
 
-        Activities.hasMany(models.Notes, {
-            onDelete: 'cascade'
-        });
-        Activities.hasMany(models.Resources, {
-            onDelete: 'cascade'
-        });
     };
     return Activities;
 

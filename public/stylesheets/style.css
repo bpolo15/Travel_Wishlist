@@ -60,6 +60,12 @@ color: white;
   background-color: transparent;
   border: transparent;
 }
+.delete-activity{
+  color: red;
+  font-size: small;
+  background-color: transparent;
+  border: transparent;
+}
 .container-fluid{
 
   display: inline-block;

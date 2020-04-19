@@ -13,11 +13,20 @@ router.get('/api/activities/:id', (req, res) => {
         where: {
             id: req.params.id
         },
-        include: [db.Notes, db.Resources]
     })
     .then(results => res.json(results))
     .catch(error => res.json(error))
 });
+
+router.get('/api/activities/destination/:DestinationId', (req, res) =>{
+    db.Activities.findAll({
+        where: {
+            DestinationId: req.params.DestinationId
+        }
+    })
+    .then(results => res.json(results))
+    .catch(error => res.json(error))
+})
 
 router.post('/api/activities', (req, res) => {
     db.Activities.create(req.body)
