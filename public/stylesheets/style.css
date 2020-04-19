@@ -25,7 +25,7 @@ form.login {
   -webkit-text-stroke-color: grey;
 }
 #signupPage{
-  background: url("Images/Romania2\ \(2\).jpg") no-repeat center center fixed;
+  background: url(Images/Shkoder.JPG) no-repeat center center fixed;
   background-size: cover;
 }
 #footer{
@@ -42,7 +42,7 @@ color: white;
     width: 250px;
 }
 #membersPage{
-  background: url(Images/Shkoder.JPG) no-repeat center center fixed;
+  background: url("Images/Romania2\ \(2\).jpg") no-repeat center center fixed;
   background-size: cover;
 }
 #memberWelcome{
@@ -79,7 +79,7 @@ color: white;
   margin-left: 10px;
 }
 #homePage{
-  background: url(Images/Shkoder.JPG) no-repeat center center fixed;
+  background: url("Images/Romania2\ \(2\).jpg") no-repeat center center fixed;
   background-size: cover;
 }
 .card-img-top{
