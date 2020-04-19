@@ -54,22 +54,22 @@ function getDestination(userId){
               $("#newActivity").append(card);
             }
             for (let i = 0; i < response.length; i++) {
-              const { id, activity, picture } = response[i];
-              console.log(id, activity, picture);
+              const { id, activity, picture, note, resource, description} = response[i];
+              console.log(id, activity, picture, note, resource, description);
               console.log(response[i]);
-      
-             
               const card = $('<div class="card">').addClass("card");
               const image = $('<img class="card-img-top">').attr("src", picture);
               const cardBody = $("<div>").addClass("card-body");
               const destinationName = $('<h4 class="card-title text-center">').text(
-                activity
-              );
+                activity)
+              const cardnote = $('<p class="card-text">').text(note)
+              const cardlink = $('<p class="card-text">').text(description)
+              // attr("href", resource)
               const deleteButton = $(`<span><button class="delete-activity" data-activity-id=${id}>X</button>
                 </span>`);
               
               destinationName.append(deleteButton);
-              cardBody.append(image, destinationName);
+              cardBody.append(image, destinationName, cardnote, cardlink);
               card.append(cardBody);
               $("#newActivity").append(card);
             }
