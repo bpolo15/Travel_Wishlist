@@ -21,8 +21,8 @@ form.login {
 #welcometext{
   color: white;
   font-weight: bold;
-  -webkit-text-stroke-width: .15px;
-  -webkit-text-stroke-color: grey;
+  /* -webkit-text-stroke-width: .15px;
+  -webkit-text-stroke-color: grey; */
 }
 #signupPage{
   background: url(Images/Shkoder.JPG) no-repeat center center fixed;
