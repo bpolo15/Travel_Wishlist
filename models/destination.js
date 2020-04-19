@@ -13,6 +13,9 @@ module.exports = function(sequelize, Datatypes){
             }
         });
 
+        // Destination.hasMany(models.Activities, {
+        //     onDelete: "cascade"
+        // });
         Destination.hasMany(models.Activities, {
             onDelete: "cascade"
             // hooks: true

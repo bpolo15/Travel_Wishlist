@@ -35,3 +35,8 @@ CREATE TABLE IF NOT EXISTS `Activities`
 `DestinationId` INTEGER NOT NULL, 
 PRIMARY KEY (`id`), 
 FOREIGN KEY (`DestinationId`) REFERENCES `Destinations` (`id`) ON DELETE CASCADE ON UPDATE CASCADE);
+
+ 
+
+ 
+ 

@@ -12,7 +12,7 @@ module.exports = function(sequelize, Datatypes){
     Activities.associate = function(models){
         Activities.belongsTo(models.Destination, {
             foreignKey: {
-                allowNull: false
+                allowNull: false,
             }
              
         });
