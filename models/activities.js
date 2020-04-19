@@ -3,6 +3,9 @@ module.exports = function(sequelize, Datatypes){
 
         activity: Datatypes.STRING,
         picture: Datatypes.STRING,
+        note: Datatypes.STRING,
+        resource: Datatypes.STRING,
+        description: Datatypes.STRING
 
     })
 
@@ -14,12 +17,6 @@ module.exports = function(sequelize, Datatypes){
              
         });
 
-        Activities.hasMany(models.Notes, {
-            onDelete: 'cascade'
-        });
-        Activities.hasMany(models.Resources, {
-            onDelete: 'cascade'
-        });
     };
     return Activities;
 
