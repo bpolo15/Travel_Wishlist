@@ -27,6 +27,7 @@ $(document).ready(function() {
       console.log(response);
       $("#newActivity").html('');
       for (let i = 0; i < response.length; i++) {
+
         const { id, activity, picture } = response[i];
         console.log(id, activity, picture);
         console.log(response[i]);
