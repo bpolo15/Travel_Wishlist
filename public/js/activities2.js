@@ -20,19 +20,22 @@ function getDestination(userId){
     }
     $(document).on('click', ".dropdown-item", getIDdest)
     function getIDdest(){
+      $(".display-4").html('')
       const id = $(this).attr("data-destination-id")
       console.log(id);
-      $.get('api/destinations/' + id).then((response) => {
-       const destination = response.location;
+      $.get("/api/destinations/" + id).then((response) => {
+        console.log(response);
+        const destination = response[0].location
         console.log(destination)
-
-      renderActivities(id);
-
+        $(".display-4").append("Activities for " + destination)
       })
-    
-    
-    }
+      renderActivities(id);
+     
 
+      }
+    
+    
+    
     function renderActivities(id){
         $.get("/api/activities/destination/" + id).then((response) => {
             $("#newActivity").html('');
