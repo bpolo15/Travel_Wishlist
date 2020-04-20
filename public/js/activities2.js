@@ -124,7 +124,7 @@ function getDestination(userId){
         }
 
         function addActivity(newActivities) {
-          $.post("/api/activities/", newActivities)
+          $.post("/api/activities", newActivities)
             .then((response) => {
               console.log(response);
               location.reload()
