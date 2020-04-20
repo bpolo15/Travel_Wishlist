@@ -19,7 +19,7 @@ $(document).ready(function () {
           console.log(response[i]);
   
           const activityLink = $(`<a href=/activities/>`);
-          const card = $('<div class="card">').addClass("col-lg-4 col-md-4 col-lg-6 card");
+          const card = $('<div class="card">').addClass("col-sm-6 col-md-6 col-lg-6 card");
           const image = $('<img class="card-img-top">').attr("src", picture);
           const cardBody = $("<div>").addClass("card-body");
           const destinationName = $('<h4 class="card-title text-center">').text(

@@ -30,6 +30,7 @@ function getDestination(userId){
         console.log(destination)
         $(".display-4").append("Activities for " + destination)
       })
+      console.log("ID", id)
       renderActivities(id);
       getActivity(id)
     }
@@ -57,13 +58,13 @@ function getDestination(userId){
               const { id, activity, picture, note, resource, description} = response[i];
               console.log(id, activity, picture, note, resource, description);
               console.log(response[i]);
-              const card = $('<div class="card">').addClass("card");
+              const card = $('<div class="card">').addClass("col-sm-6 col-md-6 col-lg-6 card");
               const image = $('<img class="card-img-top">').attr("src", picture);
               const cardBody = $("<div>").addClass("card-body");
               const destinationName = $('<h4 class="card-title text-center">').text(
                 activity)
               const cardnote = $('<p class="card-text">').text(note)
-              const cardlink = $('<p class="card-text">').text(description)
+              const cardlink = $('<p class="card-text">').append(`<a href = ${resource}> ${description}`)
               // attr("href", resource)
               const deleteButton = $(`<span><button class="delete-activity" data-activity-id=${id}>X</button>
                 </span>`);
@@ -97,7 +98,7 @@ function getDestination(userId){
             
         }
 
-        function getActivity(DestinationId) {
+        function getActivity(id) {
           $("#save").on("click", (event) => {
             event.preventDefault();
             const activity = $("#act-name").val().trim();
@@ -105,7 +106,8 @@ function getDestination(userId){
             const note = $("#act-notes").val().trim();
             const resource = $("#res-url").val().trim();
             const description = $("#descrp").val().trim();
-            console.log(activity, picture, note, resource, description);
+            const DestinationId = id
+            console.log("Destination ID: ", DestinationId)
       
             const newActivities = {
               activity,
@@ -116,17 +118,19 @@ function getDestination(userId){
               DestinationId
             };
             console.log("New activity: ", newActivities);
-            addActivity(newActivities);
+            addActivity(newActivities, id);
           });
         }
 
-        function addActivity(newActivities) {
-          $.post("/api/activities", newActivities)
+        function addActivity(newActivities, id) {
+          $.post("/api/activities/", newActivities)
             .then((response) => {
               console.log(response);
-              location.reload();
+              location.reload()
             })
             .catch((error) => console.log(error));
+
+          
         }
 
 
