@@ -37,6 +37,7 @@ function getDestination(userId){
     
     
     function renderActivities(id){
+      $(".activityBtn").append
         $.get("/api/activities/destination/" + id).then((response) => {
             $("#newActivity").html('');
             if(response.length === 0){
@@ -122,7 +123,7 @@ function getDestination(userId){
           });
         }
 
-        function addActivity(newActivities, id) {
+        function addActivity(newActivities) {
           $.post("/api/activities/", newActivities)
             .then((response) => {
               console.log(response);
@@ -132,14 +133,6 @@ function getDestination(userId){
 
           
         }
-
-
-
-
-
-
-
-
 
 
 
