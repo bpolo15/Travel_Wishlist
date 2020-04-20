@@ -93,7 +93,13 @@ color: white;
     background-color: white;
 }
 
-nav.crete{
-  font-family: 'Crete Round', serif;
-  font: #834d5e;
+
+.navbar-brand{
+  color: #834d5e;
+  font-size: 50px;
+
+}
+
+.nav-link{
+  color: #834d5e;
 }
