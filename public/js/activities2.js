@@ -65,7 +65,7 @@ function getDestination(userId){
               const destinationName = $('<h4 class="card-title text-center">').text(
                 activity)
               const cardnote = $('<p class="card-text">').text(note)
-              const cardlink = $('<p class="card-text">').append(`<a href = ${resource}> ${description}`)
+              const cardlink = $('<p class="card-text">').append(`<a href = ${resource}>${description}`)
               // attr("href", resource)
               const deleteButton = $(`<span><button class="delete-activity" data-activity-id=${id}>X</button>
                 </span>`);
