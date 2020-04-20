@@ -85,5 +85,15 @@ color: white;
 .card-img-top{
   max-height: 275px;
   max-width: 500px;
- 
+}
+
+.jumbotron{
+  border: 3px solid #834d5e;
+    border-radius: 5px;
+    background-color: white;
+}
+
+nav.crete{
+  font-family: 'Crete Round', serif;
+  font: #834d5e;
 }
