@@ -31,7 +31,7 @@ $(document).ready(function () {
           destinationName.append(deleteButton);
           cardBody.append(activityLink, destinationName);
           card.append(cardBody);
-          $("#newDestination").append(card);3
+          $("#newDestination").append(card);
         }
       });
     }
@@ -83,14 +83,5 @@ $(document).ready(function () {
         .catch((error) => console.log(error));
     }
   
-    // $("#exampleModal").on("show.bs.modal", function (event) {
-    //   console.log("Button");
-    //   var button = $(event.relatedTarget); // Button that triggered the modal
-    //   var recipient = button.data("whatever"); // Extract info from data-* attributes
-    //   // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
-    //   // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
-    //   var modal = $(this);
-    //   modal.find(".modal-title").text("New message to " + recipient);
-    //   modal.find(".modal-body input").val(recipient);
-    // });
+
   });

@@ -109,6 +109,7 @@ function getDestination(userId){
             const description = $("#descrp").val().trim();
             const DestinationId = id
             console.log("Destination ID: ", DestinationId)
+           
       
             const newActivities = {
               activity,
@@ -119,7 +120,7 @@ function getDestination(userId){
               DestinationId
             };
             console.log("New activity: ", newActivities);
-            addActivity(newActivities, id);
+            addActivity(newActivities);
           });
         }
 
