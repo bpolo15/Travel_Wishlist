@@ -9,14 +9,14 @@ const FILES_TO_CACHE = [
   '/signup.html',
   '/members.html',
   
-  'stylesheets/Images/Icon.jpg',
+  
   'stylesheets/Images/LakeBled (3).jpg',
   'stylesheets/Images/Romania2 (2).jpg',
   'stylesheets/Images/Shkoder.JPG',
   'stylesheets/style.css',
 
   'js/activities.js',
-  'js/destinations2/js',
+  'js/destinations2.js',
   'js/login.js',
   'js/members.js',
   'js/signup.js',
