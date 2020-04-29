@@ -42,8 +42,8 @@ router.delete('/api/destinations/:id', (req, res) => {
             id: req.params.id
         }
     })
-    .then((results) => res.status(200).json(results))
-    .catch(error => res.status(500).json(error))
+    .then(results => res.json(results))
+    .catch(error => res.json(error))
 });
 
 module.exports = router;

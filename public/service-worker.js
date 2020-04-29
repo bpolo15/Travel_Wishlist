@@ -7,7 +7,7 @@ const FILES_TO_CACHE = [
   '/activities.html',
   '/login.html',
   '/signup.html',
-  '/members.html',
+  
   
   
   'stylesheets/Images/LakeBled (3).jpg',
@@ -16,7 +16,7 @@ const FILES_TO_CACHE = [
   'stylesheets/style.css',
 
   'js/activities.js',
-  'js/destinations2.js',
+  'js/destination2.js',
   'js/login.js',
   'js/members.js',
   'js/signup.js',
