@@ -8,7 +8,7 @@
   
   ## Screenshots 
 
-  ![Login](/stylesheets/images/ReadMe1.JPG)
+  ![Login](/public/stylesheets/images/ReadMe1.png)
 
   ## Installation
   
