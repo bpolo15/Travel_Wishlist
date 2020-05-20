@@ -20,9 +20,11 @@
   ![activities](/public/stylesheets/Images/ReadME3.JPG)
 
   ## Technologies Used:
-
+  
+  ```
   HTML5, CSS3, JavaScript, JQuery, MySQL
-
+  ```
+  
   ## Installation
   
   To install necessary dependencies, run the following command:
@@ -33,7 +35,7 @@
     
   ## The Team:
   
-  Sandrah Morande - front and back end - https://github.com/SandrahMor
+  Sandrah Morande - https://github.com/SandrahMor
   
 
   ## Questions
