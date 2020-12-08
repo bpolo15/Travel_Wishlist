@@ -51,14 +51,23 @@ color: white;
 #homeLogout{
   display: inline-block;
 }
-.card{
-  float: left;
+.card {
+  float: left; 
   padding: 10px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   min-height: 250px;
   border-color: #834d5e;
+  min-width: 250px;
+  margin-bottom: 10px;
 
-
+}
+#destCard{
+  float: left; 
+  padding: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  min-height: 250px;
+  border-color: #834d5e;
+  min-width: 250px;
 }
 .delete-destination{
   color: red;
