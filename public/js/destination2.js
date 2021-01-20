@@ -69,7 +69,7 @@ $(document).ready(function () {
     function deleteDestination() {
       console.log("DELETE");
       event.preventDefault();
-      const id = $(this).attr("data-destination-id");
+      const id = parseInt($(this).attr("data-destination-id"));
       console.log(id);
   
       $.ajax({
